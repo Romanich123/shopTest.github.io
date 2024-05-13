@@ -2,6 +2,7 @@
   "name": "vue-webpack",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://github.com/Romanich123/shopTest.github.io",
   "main": "index.js",
   "scripts": {
     "start": "webpack serve",
