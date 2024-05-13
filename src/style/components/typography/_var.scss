@@ -1,0 +1,25 @@
+$typography_h3: (
+  font-size: 30px,
+  line-height: normal
+);
+
+$typography_subtitle-1: (
+  font-size: 18px,
+  line-height: normal,
+);
+$typography_subtitle-2: (
+  font-size: 20px,
+  line-height: normal
+);
+$subtitle-2-breakpoints: (
+        768px: (font-size: 14px),
+        991px: (font-size: 16px),
+);
+$typography_subtitle-3: (
+  font-size: 14px,
+  line-height: normal
+);
+$typography_caption: (
+  font-size: 10px,
+  line-height: normal
+);

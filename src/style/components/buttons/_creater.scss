@@ -1,0 +1,140 @@
+@import "../utils/mixins";
+@import "var";
+@import "../utils/fonts";
+
+.c-btn{
+  display: inline-block;
+  cursor: pointer;
+  &__nav{
+    position: relative;
+    font-family: "Roboto-Bold", sans-serif;
+    height: 60px;
+
+    @include SetConfig($primary_config);
+    &:not(:active):focus,
+    &:not(:active):hover {
+      @include SetConfig($primary_hover_config);
+    }
+    &:not(:hover):not(:focus):active {
+      @include SetConfig($primary_active_config);
+    }
+    &[disabled] {
+      @include SetConfig($primary_disabled_config);
+    }
+    &::before{
+      content: '';
+      background-image: url("../assets/svg/restangle.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      position: absolute;
+    }
+    &--back, &--home{
+      img{
+        padding-right: 10px;
+      }
+    }
+    &--home{
+      &::before{
+        transform: scaleX(-1);
+        left: 5px;
+      }
+    }
+  }
+  &__add{
+    position: relative;
+    font-family: "Roboto-Bold", sans-serif;
+    @include SetConfig($add_btn);
+    &::before{
+      content: '';
+      background: $cGreenGradient;
+      width: 26px;
+      height: 25px;
+      position: absolute;
+      left: -1px;
+      top: 1px;
+      border-radius: 5px;
+      z-index: -1;
+    }
+  }
+  &__buy{
+    position: relative;
+    font-family: "Roboto-Bold", sans-serif;
+
+    @include SetConfig($buy_btn);
+    &:not(:active):focus,
+    &:not(:hover):not(:focus):active,
+    &:not(:active):hover {
+      @include SetConfig($buy_btn_hover);
+    }
+    &[disabled] {
+      @include SetConfig($buy_btn_disabled);
+    }
+
+    &::before{
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 25px;
+      padding: 1px;
+      background:$cGradientMain2;
+      -webkit-mask: $cGradientMain2 content-box, $cGradientMain2;
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+    span{
+      padding-left: 20px;
+      display: flex;
+      align-items: center;
+      img{
+        margin-right: 10px;
+        width: 20px;
+      }
+    }
+
+
+  }
+}
+
+@media (max-width: 767px) {
+  .c-btn{
+    &__nav{
+      padding: 0;
+        span{
+          display: none;
+        }
+      &::before{
+        content: none;
+      }
+      &--back, &--home{
+        img{
+          padding-right: 0;
+        }
+      }
+
+    }
+    &__buy{
+      background: $cGradientMain2;
+      span{
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+        img{
+          margin-right: 5px;
+          width: 20px;
+        }
+      }
+    }
+  }
+
+}
+@media (max-width: 575px) {
+  .c-btn{
+    &__buy{
+      padding: 10px 15px;
+
+    }
+  }
+}

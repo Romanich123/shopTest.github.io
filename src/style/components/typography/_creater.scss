@@ -1,0 +1,67 @@
+@import "../utils/fonts";
+@import "var";
+
+.typography {
+  &__font{
+    &--bold{
+      font-family: "Roboto-Bold", sans-serif;
+      font-weight: 700;
+    }
+    &--medium{
+      font-family: "Roboto-Medium", sans-serif;
+      font-weight: 500;
+    }
+    &--regular{
+      font-family: "Roboto-Regular", sans-serif;
+      font-weight: 400;
+    }
+    &--leksaBold{
+      font-family: "Leksa-Bold", sans-serif;
+      font-weight: 700;
+    }
+    &--leksaExtra{
+      font-family: "Leksa-Bold", sans-serif;
+      font-weight: 900;
+    }
+  }
+  &__size{
+    &--h3{
+      @include SetConfig($typography_h3);
+    }
+    &--subtitle-1{
+      @include SetConfig($typography_subtitle-1);
+    }
+    &--subtitle-2{
+      @include SetConfig($typography_subtitle-2);
+
+    }
+    &--subtitle-3{
+      @include SetConfig($typography_subtitle-3);
+    }
+    &--caption{
+      @include SetConfig($typography_caption);
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .typography__size--subtitle-2, .typography__size--subtitle-1{
+    font-size: 16px;
+  }
+
+}
+@media (max-width: 767px) {
+  .typography__size--h3{
+    font-size: 20px;
+  }
+  .typography__size--subtitle-3{
+    font-size: 11px;
+  }
+  .typography__size--subtitle-2{
+    font-size: 14px;
+  }
+  .typography__size--subtitle-1{
+    font-size: 13px;
+  }
+
+}

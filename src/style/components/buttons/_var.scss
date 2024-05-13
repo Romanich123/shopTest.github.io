@@ -1,0 +1,51 @@
+$primary_config: (
+  display: flex,
+  align-items: center,
+  border-radius: 50px,
+  padding: 13px 23px,
+  width: fit-content,
+  font-weight: 700
+);
+$primary_hover_config: (
+  background-color: $cSkyBottGradient,
+  transition: all .5s ease
+);
+$primary_active_config: (
+  background-color: $cSkyBottGradient
+);
+$primary_disabled_config: (
+  cursor: disabled
+);
+
+$add_btn: (
+  border: 1px solid #21CC14,
+  border-radius: 5px,
+  background: $cGreenGradient,
+  padding: 3px 4px,
+  display: flex,
+  justify-content: center,
+  width: fit-content,
+  font-size: 13px,
+  font-weight: 900,
+  color: $cWhiteYellowGradient
+);
+$buy_btn: (
+  background: $cButtonGradient,
+  border: none,
+  border-radius: 25px,
+  padding: 14px 30px,
+  color: $cWhite,
+  font-size: 14px,
+  display: flex,
+  justify-content: center,
+  align-items: center,
+  z-index: 2,
+  transition: all .2s ease
+);
+$buy_btn_hover: (
+ background: $cGradientMain2
+);
+$buy_btn_disabled: (
+  opacity: .5,
+  pointer-events: none
+)

@@ -1,0 +1,22 @@
+@import "../utils/colors";
+
+.color{
+  &--white{
+    color: $cWhite;
+  }
+  &--sky{
+    color: $cSkyBlue;
+  }
+  &--default{
+    color: $cDefault;
+  }
+  &--green{
+    color: $cGreen;
+  }
+  &__bg{
+    &--dark{
+      background-color: $cBlack24;
+    }
+  }
+}
+
